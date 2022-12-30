@@ -103,12 +103,27 @@ namespace BinarySearchtree
             }
         }
 
+        public void postoder(Node ptr)
+        {
 
+            if (ROOT == null)
+            {
+                Console.WriteLine("Tree is empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                postoder(ptr.leftchild);
+                postoder(ptr.rightchild);
+                Console.Write(ptr.info + " ");
+            }
+        }
     }
     class Program
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
