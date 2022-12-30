@@ -123,7 +123,57 @@ namespace BinarySearchtree
     {
         static void Main(string[] args)
         {
-            
+            BinaryTree x = new BinaryTree();
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("\n***Menu***\n");
+                    Console.WriteLine("1. Implement insert opration");
+                    Console.WriteLine("2. Perform inorde traversal");
+                    Console.WriteLine("3. Perform preorde traversal");
+                    Console.WriteLine("4. Perform postorde traversal");
+                    Console.WriteLine("5. exit");
+                    Console.Write("\nEnter your choice: ");
+                    String sInput = Console.ReadLine();
+                    char ch = Convert.ToChar(sInput == "" ? "0" : sInput);
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                Console.Write("Enter");
+                                string word = Console.ReadLine();
+                            }
+                            break;
+                        case '2':
+                            {
+                                x.inorder(x.ROOT);
+                            }
+                            break;
+                        case '3':
+                            {
+                                x.preorder(x.ROOT);
+                            }
+                            break;
+                        case '4':
+                            {
+                                x.postoder(x.ROOT);
+                            }
+                            break;
+                        case '5':
+                            return;
+                        default:
+                            Console.WriteLine("\nInvalid choice");
+                            break;
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Check for the values entered");
+                }
+
+            }
         }
     }
 }
