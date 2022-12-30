@@ -20,6 +20,15 @@ namespace BinarySearchtree
             rightchild = r;
         }
     }
+
+    class BinaryTree
+    {
+        public Node ROOT;
+        public BinaryTree()
+        {
+            ROOT = null;
+        }
+    }
     class Program
     {
         static void Main(string[] args)
